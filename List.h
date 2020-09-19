@@ -28,6 +28,10 @@ class List{
   void insert_at(size_t, T*); //insert an element at given index 
   T* pop_front(); //pop the data from the front link node off of the list
   T* pop_back();  //pop the data from the back link node off of the list
+  void remove_all(T* val);
+  void remove_first(T* val);
+  void erase(size_t index);
+  void print();
   size_t length(){ return size; } 
  private:
   LinkNode<T>* head;

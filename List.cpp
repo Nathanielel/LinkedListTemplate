@@ -139,6 +139,35 @@ void List<T>::insert_at(size_t index, T* val){
 
 }
 
+//PRECONDITION: T type has stream insertion operation defined.
+template <class T>
+void List<T>::print(){
+  LinkNode<T>* temp = head;
+  while (temp){
+    std::cout << *(temp->data);
+    if (temp-> next)
+      std::cout << ": ";
+    temp = temp->next;
+  }
+  std::cout << std::endl;
+}
+
+template <class T>
+void List<T>::remove_all(T* val){
+
+}
+
+template <class T>
+void List<T>::remove_first(T* val){
+
+}
+
+template <class T>
+void List<T>::erase(size_t index){
+  if (index >= size || index < 0) return;
+
+}
+
 //since I moved the functionality to a cpp file, these template lines must be placed here to deal with undefined reference issues
 template class List<int>; 
 template class List<double>;
