@@ -1,8 +1,6 @@
 /**
    Nathaniel Larsen - nlarsen - nathaniel.e.larsen@gmail.com
    List.cpp - Linked List class template Implementaion File
-   Assignment 1 - Linked List Review
-   Removed TODOs for ease of review.
 */
 
 #include <iostream>
