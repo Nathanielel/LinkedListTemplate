@@ -149,13 +149,12 @@ void List<T>::insert_at(size_t index, T *val) {
     link = link->next;
   }
   // link now points to node to follow new node to be inserted
-  LinkNode<T> *anchor =
-      link->prev;  // get reference to node to come before new element
+  LinkNode<T> *anchor = link->prev;  // get ref to node to come before new elt
   LinkNode<T> *temp = new LinkNode<T>(val);  // allocate memory for new element
-  anchor->next = temp;
-  temp->prev = anchor;  // attach new element to front of list
-  temp->next = link;
-  link->prev = temp;  // atttach the rest of list to new element
+  anchor->next = temp;  // attach new element to front of list
+  temp->prev = anchor;
+  temp->next = link;  // atttach the rest of list to new element
+  link->prev = temp;
 }
 
 // PRECONDITION: T type has stream insertion operation defined.
@@ -164,7 +163,7 @@ void List<T>::print() {
   LinkNode<T> *temp = head;
   while (temp) {
     std::cout << *(temp->data);
-    if (temp->next) std::cout << ": ";
+    if (temp->next) std::cout << ":";
     temp = temp->next;
   }
   std::cout << std::endl;
